@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Hubballi&family=Hurricane&family=Karla:wght@200&family=Open+Sans:wght@300&family=Poppins:wght@100&family=Raleway:wght@100&family=Roboto+Condensed:wght@300;700&family=Smooch+Sans:wght@200&display=swap');
+
+
+*{
+font-family: sans-serif;
+box-sizing: border-box;
+}
+body{
+background-image: linear-gradient(to left,#1693a5,#45b5c4,#7ececa,#a0ded6,#c7ede8);
+}
+
+.album{
+border:none;
+width: 90vw;
+height: auto;
+margin: 0 auto;
+border-radius: 10px;
+background-color:rgba(255,255,255,.3);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+box-shadow: 2px 2px 3px #41b5c7;
+padding: 1rem;
+}
+
+.filter{
+display: flex;
+justify-content: space-around;
+margin: 0 auto;
+height: 80px;
+width: 80vw;
+align-items: center;
+border-radius: 10px;
+box-shadow: 2px 2px 3px #2b6b75;
+position: relative;
+}
+
+.filter .filtrar{
+position: absolute;
+right: -20px;
+background: none;
+display: flex;
+align-items: center;
+color: #333;
+}
+.filter div{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+margin: 0 auto;
+}
+.filter .filtrar:hover{
+color: #000;
+}
+
+.filter .btn-pet{
+display: none;
+border-radius: 10px;
+text-align: center;
+justify-content: center;
+align-items: center;
+color:#333;
+background-color: rgba(255,255,255,.3);
+box-shadow: 1px 1px 1px rgb(118, 173, 173);
+
+}
+
+.filter .btn-pet .reset{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 1rem;
+width: 100%;
+}
+
+.filter .btn-pet:hover{
+transform: translateY(-2px);
+color: #000;
+box-shadow: 2px 4px 5px rgb(118, 173, 173);
+}
+
+.filter .btn-pet span{
+position: relative;
+width: 20px;
+height: 20px;
+}
+
+.filter .btn-pet span img{
+width: 100%;
+position: absolute;
+}
+.filter .btn-flex{
+display: flex;
+margin: 5px;
+animation: animaçao 1s;
+}
+
+.filter .logo{
+padding: 1rem;
+font-size: 30px;
+cursor: pointer;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.filter .logo span{
+font-size: 20px;
+color: #000;
+font-family: 'Hurricane', cursive;
+}
+
+.filter button{
+width: 100px;
+height: 30px;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+}
+
+.content{
+width: 80vw;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+margin: 0 auto;
+margin-top: 10px;
+justify-content: center;
+gap: 10px;
+}
+
+.content .img-content{
+display: flex;
+flex-direction: column;
+border-radius: 10px;
+width:200px;
+height: auto;
+position: relative;
+box-shadow: 2px 2px 3px #2b6b75
+}
+.content .img-content img{
+height: 200px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+cursor: pointer;
+opacity: 90%;
+box-shadow: 1px 3px 4px #333;
+object-fit: cover;
+/*flex: 1 1 200px;*/
+}
+.content .img-content img:hover{
+opacity: 100%;
+transform: translateY(1px);
+}
+.content .img-content p{
+color: #333;
+text-align: center;
+}
+.content .img-content span{
+position:absolute;
+color:#333;
+margin: 5px;
+cursor: pointer;
+transition: .2s;
+}
+.content .img-content span:hover{
+color: rgb(190, 23, 23);
+}
+.content .img-content button{
+border:none;
+border-radius: 10px;
+cursor: pointer;
+width: 80px;
+height: 23px;
+background-color: #333;
+color: rgb(199, 197, 197);
+align-items: center;
+margin: 0 auto;
+margin-bottom: 10px;
+}
+.content .img-content button:hover{
+background-color: rgb(1, 102, 1);
+color: #fff;
+}
+.content .inative{
+border: solid red;
+display: none;
+
+}
+.content .active{
+animation:animaçao .3s ease-in;
+}
+
+@keyframes animaçao {
+0%{
+opacity: 0%;
+ } 
+100%{
+opacity: 100%;
+ }
+}
+
+
+@media (max-width:650px) {
+
+.filter div{
+display: flex;
+flex-direction: column;
+position: absolute;
+right: 0;
+top: 90px;
+background-color:rgb(123, 201, 197);
+z-index: 1000;
+width: 30vw;
+border-radius: 5px;
+height: 0;
+transition: .3s;
+}
+.filter .responsive{
+height: 220px;
+}
+
+.filter div button{
+   padding: 1rem;
+   margin: 10px;
+   background-color: rgba(255,255,255,.3);
+  }
+}
